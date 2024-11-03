@@ -55,6 +55,15 @@ export type ButtonConfig = {
     primary: string;
     secondary: string;
     danger: string;
+    outline: string;
+    ghost: string;
+    link: string
+  },
+  size: {
+    default: string;
+    sm: string;
+    lg: string;
+    icon: string;
   }
 }
 
@@ -65,8 +74,8 @@ export interface Theme {
   };
   currentColorScheme: ColorScheme;
   typography: TypographyConfig;
-  components?: {
-    button?: ButtonConfig;
+  components: {
+    button: ButtonConfig;
   }
   isDark?: boolean;
 }

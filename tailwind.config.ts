@@ -7,6 +7,6 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [generateConfig(defaultTheme)],
+  plugins: [],
 } satisfies Config
 

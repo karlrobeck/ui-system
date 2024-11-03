@@ -9,3 +9,4 @@ export { default as Table } from './typography/table';
 export { default as List } from './typography/list';
 export { default as Code } from './typography/code';
 export { default as Text } from './typography/text';
+export { default as Button } from './components/button';

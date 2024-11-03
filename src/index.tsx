@@ -12,6 +12,7 @@ import {
   List,
   Code,
   Text,
+  Button,
 } from "../lib";
 
 const Home: Component<{}> = (_props) => {
@@ -64,7 +65,11 @@ const Home: Component<{}> = (_props) => {
         <li>3rd level of one-liners : 20 gold coins</li>
       </List>
       <Code>console.log("Hello, World!")</Code>
-      <Text>hello</Text>
+      <Text as="p">Hello</Text>
+      <Button as="button" size="icon">
+        Hello anchor tag
+      </Button>
+      <Button type="submit">Hello anchor tag</Button>
     </ThemeProvider>
   );
 };
