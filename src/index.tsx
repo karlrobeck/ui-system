@@ -66,7 +66,7 @@ const Home: Component<{}> = (_props) => {
       </List>
       <Code>console.log("Hello, World!")</Code>
       <Text as="p">Hello</Text>
-      <Button as="button" size="icon">
+      <Button as="button" size="sm">
         Hello anchor tag
       </Button>
       <Button type="submit">Hello anchor tag</Button>

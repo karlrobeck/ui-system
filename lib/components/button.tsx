@@ -23,14 +23,14 @@ const Button = <T extends keyof HTMLElementTagNameMap>(
   } = props;
   return (
     <Dynamic
-      class={cn(
-        rest.class,
-        components.button.base,
-        components.button.variant.primary,
-        components.button.size.default
-      )}
       component={as as any}
       {...rest}
+      class={cn(
+        components.button.base,
+        Object(components.button.variant)[variant],
+        Object(components.button.size)[size],
+        rest.class
+      )}
     >
       {children}
     </Dynamic>
