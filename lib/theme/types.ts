@@ -14,6 +14,11 @@ export type ColorConfig = {
   cardForeground: string;
   popover: string;
   popoverForeground: string;
+  danger: string;
+  dangerForeground: string;
+  success: string;
+  successForeground: string;
+  input:string;
   border: string;
   ring: string;
   radius: string;
@@ -52,12 +57,30 @@ export type TypographyConfig = {
 export type ButtonConfig = {
   base: string;
   variant: {
-    primary: string;
-    secondary: string;
-    danger: string;
-    outline: string;
-    ghost: string;
-    link: string
+    primary: {
+      light: string;
+      dark: string;
+    };
+    secondary: {
+      light: string;
+      dark: string;
+    };
+    danger: {
+      light: string;
+      dark: string;
+    };
+    outline: {
+      light: string;
+      dark: string;
+    };
+    ghost: {
+      light: string;
+      dark: string;
+    };
+    link: {
+      light: string;
+      dark: string;
+    }
   },
   size: {
     default: string;
@@ -66,6 +89,15 @@ export type ButtonConfig = {
     icon: string;
   }
 }
+
+export type InputConfig = {
+  base: {
+    self: string;
+    light: string;
+    dark: string;
+  }
+}
+
 
 export interface Theme {
   colors: {
@@ -76,6 +108,7 @@ export interface Theme {
   typography: TypographyConfig;
   components: {
     button: ButtonConfig;
+    input: InputConfig;
   }
   isDark?: boolean;
 }

@@ -4,9 +4,8 @@ import {defaultTheme} from './lib/theme/preset'
 
 export default {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}','./lib/**/*.{js,jsx,ts,tsx}'],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+  darkMode: 'selector',
+  theme: {},
+  plugins: [generateConfig(defaultTheme)],
 } satisfies Config
 

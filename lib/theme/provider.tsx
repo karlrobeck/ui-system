@@ -11,7 +11,7 @@ export const ThemeProvider: Component<{
   return (
     <>
       <ProviderContext.Provider value={props.theme}>
-        {props.children}
+        <div class={getTheme().isDark ? "dark" : ""}>{props.children}</div>
       </ProviderContext.Provider>
     </>
   );
@@ -25,10 +25,12 @@ export function getTheme() {
 
   if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     context.currentColorScheme = "dark";
+    context.isDark = true;
   }
 
   if (window.matchMedia("(prefers-color-scheme: light)").matches) {
     context.currentColorScheme = "light";
+    context.isDark = false;
   }
 
   return context;

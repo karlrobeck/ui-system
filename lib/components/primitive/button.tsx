@@ -1,7 +1,7 @@
 import { Component, JSX } from "solid-js";
 import { Dynamic } from "solid-js/web";
-import { getTheme } from "../theme/provider";
-import { cn } from "../utils";
+import { getTheme } from "../../theme/provider";
+import { cn } from "../../utils";
 
 type ButtonProps<T extends keyof HTMLElementTagNameMap> = {
   children: JSX.Element;
@@ -13,7 +13,7 @@ type ButtonProps<T extends keyof HTMLElementTagNameMap> = {
 const Button = <T extends keyof HTMLElementTagNameMap>(
   props: ButtonProps<T>
 ) => {
-  const { components } = getTheme();
+  const { components, isDark } = getTheme();
   const {
     children,
     as = "button",
@@ -21,13 +21,16 @@ const Button = <T extends keyof HTMLElementTagNameMap>(
     size = "default",
     ...rest
   } = props;
+
+  const colorMode = isDark ? "dark" : "light";
+
   return (
     <Dynamic
       component={as as any}
       {...rest}
       class={cn(
         components.button.base,
-        Object(components.button.variant)[variant],
+        Object(components.button.variant)[variant][colorMode],
         Object(components.button.size)[size],
         rest.class
       )}
