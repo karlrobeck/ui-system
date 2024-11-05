@@ -1,7 +1,7 @@
-import { Component, JSX, Match, Switch } from "solid-js";
-import { getTheme } from "../theme/provider";
+import { Component, JSX } from "solid-js";
+import { getTheme } from "../theme/provider.tsx";
 import { Dynamic } from "solid-js/web";
-import { cn } from "../utils";
+import { cn } from "../utils.ts";
 
 const Root: Component<
   { children: JSX.Element } & JSX.HTMLAttributes<HTMLTableElement>

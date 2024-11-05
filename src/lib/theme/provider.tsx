@@ -1,6 +1,6 @@
-import { children, Component, createSignal, JSX, useContext } from "solid-js";
+import { Component, JSX, useContext } from "solid-js";
 import { createContext } from "solid-js";
-import { Theme } from "./types";
+import { Theme } from "./types.ts";
 
 const ProviderContext = createContext<Theme>();
 
@@ -23,12 +23,12 @@ export function getTheme() {
     throw new Error("No theme provided");
   }
 
-  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  if (globalThis.matchMedia("(prefers-color-scheme: dark)").matches) {
     context.currentColorScheme = "dark";
     context.isDark = true;
   }
 
-  if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+  if (globalThis.matchMedia("(prefers-color-scheme: light)").matches) {
     context.currentColorScheme = "light";
     context.isDark = false;
   }

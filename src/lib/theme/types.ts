@@ -98,6 +98,10 @@ export type InputConfig = {
   }
 }
 
+export type AvatarConfig = {
+  self: string;
+}
+
 
 export interface Theme {
   colors: {
@@ -109,6 +113,7 @@ export interface Theme {
   components: {
     button: ButtonConfig;
     input: InputConfig;
+    avatar: AvatarConfig;
   }
   isDark?: boolean;
 }

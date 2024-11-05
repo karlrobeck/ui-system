@@ -1,7 +1,7 @@
-import { Component, JSX } from "solid-js";
+import { JSX } from "solid-js";
 import { Dynamic } from "solid-js/web";
-import { getTheme } from "../../theme/provider";
-import { cn } from "../../utils";
+import { getTheme } from "../../theme/provider.tsx";
+import { cn } from "../../utils.ts";
 
 type ButtonProps<T extends keyof HTMLElementTagNameMap> = {
   children: JSX.Element;

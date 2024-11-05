@@ -1,6 +1,6 @@
-import { Component, JSX, Match, Switch } from "solid-js";
-import { getTheme } from "../theme/provider";
-import { cn } from "../utils";
+import { Component, JSX } from "solid-js";
+import { getTheme } from "../theme/provider.tsx";
+import { cn } from "../utils.ts";
 import { Dynamic } from "solid-js/web";
 
 const List: Component<

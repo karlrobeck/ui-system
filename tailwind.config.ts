@@ -1,6 +1,6 @@
-import { Config } from 'tailwindcss'
-import {generateConfig} from './lib/theme/config'
-import {defaultTheme} from './lib/theme/preset'
+import { type Config } from 'tailwindcss'
+import {generateConfig} from './src/lib/theme/config.ts'
+import {defaultTheme} from './src/lib/theme/preset.ts'
 
 export default {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}','./lib/**/*.{js,jsx,ts,tsx}'],

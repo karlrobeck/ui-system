@@ -1,7 +1,7 @@
 import { render } from "solid-js/web";
 import "./app.css";
 
-import { Component } from "solid-js";
+import { type Component } from "solid-js";
 import {
   Blockquote,
   Heading,
@@ -15,9 +15,10 @@ import {
   Button,
   Input,
   AspectRatio,
-} from "../lib";
+  Avatar,
+} from "../dist/index.mjs";
 
-const Home: Component<{}> = (_props) => {
+const Home: Component<Record<string | number | symbol, never>> = (_props) => {
   return (
     <ThemeProvider theme={defaultTheme}>
       <div class="bg-background text-foreground dark:dark-bg-background dark:dark-text-foreground">
@@ -97,6 +98,12 @@ const Home: Component<{}> = (_props) => {
                 alt=""
               />
             </AspectRatio>
+          </div>
+          <div class="p-4">
+            <Avatar
+              src="https://images.unsplash.com/photo-1535025183041-0991a977e25b"
+              fallback={<span>👨‍🚀</span>}
+            />
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { Component, JSX } from "solid-js";
-import { getTheme } from "../theme/provider";
-import Text from "./text";
+import { getTheme } from "../theme/provider.tsx";
+import Text from "./text.tsx";
 
 const Blockquote: Component<
   { cite: string; children: JSX.Element } & JSX.HTMLAttributes<HTMLElement>

@@ -1,4 +1,4 @@
-import { Theme } from "./types";
+import { Theme } from "./types.ts";
 
 export const defaultTheme: Theme = {
   colors: {
@@ -120,9 +120,12 @@ export const defaultTheme: Theme = {
     input: {
       base:{
         self:"flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-        light: "bg-background ring-offset-background file:text-foreground placeholder:text-muted-foreground",
-        dark: "dark-bg-background ring-offset-background file:dark-text-foreground placeholder:dark-text-muted-foreground",
+        light: "border-border bg-background ring-offset-background file:text-foreground placeholder:text-muted-foreground",
+        dark: "dark-border-border dark-bg-background ring-offset-background file:dark-text-foreground placeholder:dark-text-muted-foreground",
       }
     },
+    avatar:{
+      self:"inline-flex justify-center items-center overflow-hidden object-cover inline-block rounded-full h-11 w-11",
+    }
   },
 };
